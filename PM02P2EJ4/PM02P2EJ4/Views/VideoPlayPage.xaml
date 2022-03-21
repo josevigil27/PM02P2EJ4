@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="PM02P2EJ4.Views.VideoPlayPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="lbldescripcion"
+                       TextColor="#000"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       Margin="0,10,0,0" 
+                       HorizontalOptions="Center" />
+
+                <video:VideoPlayer x:Name="videoplay"
+                                   BackgroundColor="#FFF"
+                                   HeightRequest="500"
+                                   HorizontalOptions="Center"
+                                   Margin="10,5,10,0"
+                                   PlayCompletion="videoplayer_PlayCompletion" />
+
+                <Button x:Name="btnvolver"
+                        Text="Volver"
+                        BackgroundColor="#f44336"
+                        CornerRadius="10"
+                        FontSize="15"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Margin="53,10,53,50"
+                        Clicked="btnvolver_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
